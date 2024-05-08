@@ -12,6 +12,7 @@ class Addnewuser extends Component
 {
 
 
+    public $id;
     public $name;
     public $so;
     public $dob;
@@ -27,6 +28,11 @@ class Addnewuser extends Component
     public $secret_key_timestamps;
     public $res="FDGGD";
     public $res1="FDGGD";
+    public $address;
+    public $city;
+    public $state;
+    public $zipcode;
+    
 
 
 public function resetall(){
@@ -42,6 +48,10 @@ public function resetall(){
         'cname',
         'usertype',
         'userpassword',
+        'address',
+        'city',
+        'state',
+        'zipcode',
     
 ]);
 
@@ -293,12 +303,17 @@ $this->secret_key_timestamps=$secret_key_timestamp;
                 'name'=>'required',
                 'so'=>'required',
                 'dob'=>'required',
-                'pan'=>'required',
+                'pan'=>'required|min:10|max:10',
                 'mobs'=>'required|numeric|digits:10',
                 'whatappmob'=>'required|numeric|digits:10',
-                'email'=>'required|email',
-                'aadhaar'=>'required|numeric',
+                'email'=>'required|email:filter|unique:users,email',
+                'aadhaar'=>'required|numeric|digits:12',
                 'cname'=>'required',
+                'address'=>'required',
+                'city'=>'required',
+                'state'=>'required',
+                'zipcode'=>'required|digits:6',
+                
 
             ],[
 
@@ -306,6 +321,8 @@ $this->secret_key_timestamps=$secret_key_timestamp;
                 'so.required'=>'S/O Name Required',
                 'dob.required'=>'Date Of Birth Required',
                 'pan.required'=>'Pan Card Required',
+                'pan.min'=>'Pan Card Number must be atleast 10 digits',
+                'pan.max'=>'Pan Card Number must be atleast 10 digits',
                 'mobs.required'=>'Mobile Number Required',
                 'mobs.numeric'=>'Mobile Number Allowed Only Numbers',
                 'mobs.digits'=>'Mobile Number Allowed Only 10 Digits',
@@ -318,6 +335,11 @@ $this->secret_key_timestamps=$secret_key_timestamp;
                 'aadhaar.required'=>'Aadheer Card Number Required',
                 'aadhaar.numeric'=>'Aadheer Card Number Allowed Only Numbers',
                 'cname.required'=>'Company Name Required',
+                'address.required'=>'Address Required',
+                'city.required'=>'City Required',
+                'state.required'=>'State Required',
+                'zipcode.required'=>'Zipcode Required',
+                
 
             ]);
 
@@ -333,6 +355,12 @@ $this->secret_key_timestamps=$secret_key_timestamp;
                     'pan'=>$this->pan,
                     'aadheer'=>$this->aadhaar,
                     'companyid'=>$companyid,
+                    'dob'=>$this->dob,
+                    'address'=>$this->address,
+                    'city'=>$this->city,
+                    'state'=>$this->state,
+                    'zipcode'=>$this->zipcode,
+                    
             ]);
 
             if($createuser){
@@ -345,6 +373,61 @@ $this->secret_key_timestamps=$secret_key_timestamp;
             }
 
 
+    } 
+    public function mount(){
+        
+    }
+    public function Update(){
+
+        $updateqry=User::where('id',$this->id)->update([
+            'name'=>$this->name,
+            'mobile'=>$this->mobs,
+            'so'=>$this->so,
+            'altmobile'=>$this->whatappmob,
+            'dob'=>$this->dob,
+            // 'email'=>$req->email,
+            'pan'=>$this->pan,
+            'aadheer'=>$this->aadhaar,
+            'Companyname'=>$this->cname,
+            'role'=>$this->usertype,
+            'address'=>$this->address,
+            'city'=>$this->city,
+            'state'=>$this->state,
+            'zipcode'=>$this->zipcode,
+
+        ]);
+        
+        if($updateqry){
+            $this->dispatch('alert',
+            icon:'success',
+            title:'Updated User',
+        
+        );
+
+        }
+      
+
+    }
+    public function getdata($id){
+      //  dd($users);
+      $this->id=$id;
+      $details=user::where('id',$id)->get();
+      //dd($details);
+      $this->name=$details[0]->name;
+      $this->mobs=$details[0]->mobile;
+      $this->so=$details[0]->so;
+      $this->whatappmob=$details[0]->altmobile;
+      $this->dob=$details[0]->dob;
+      $this->email=$details[0]->email;
+      $this->pan=$details[0]->pan;
+      $this->aadhaar=$details[0]->aadheer;
+      $this->cname=$details[0]->Companyname;
+      $this->usertype=$details[0]->role;
+      $this->address=$details[0]->address;
+      $this->city=$details[0]->city;
+      $this->state=$details[0]->state;
+      $this->zipcode=$details[0]->zipcode;
+      
     }
 
     public function render()

@@ -64,7 +64,8 @@
                             </td>
                             <td class="align-content-center"><span><i class="bi bi-eye-fill"></i></span>
                                 <span><i class="bi bi-trash-fill mx-2"></i></span>
-                                <span><i class="bi bi-pencil-fill"></i></span>
+                                <span><a href="#"data-bs-toggle="modal" wire:click="getdata({{$users->id}})"
+                    data-bs-target="#edituser">edit</a><i class="bi bi-pencil-fill"></i>edit</span>
                             </td>
                         </tr>
                             
@@ -109,6 +110,131 @@
                                 @error('pan')
                                 <div style="color: red"> {{$message}} </div>
                                   @enderror
+                                  <label for="">Address *</label>
+                                <input type="tel" wire:model="address" class="form-control mb-2">
+                                @error('address')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                                      <label for="">State *</label>
+                                <input type="tel" wire:model="state" class="form-control mb-2">
+                                @error('state')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="">Mobile Number *</label>
+                                <input type="tel" wire:model="mobs" class="form-control mb-2">
+                                @error('mobs')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+
+                                <label for="">Alternate Mobile Number *</label>
+                                <input type="tel" wire:model="whatappmob" class="form-control mb-2">
+                                @error('whatappmob')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" wire:model="email" class="form-control mb-2" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                    @error('email')
+                                    <div style="color: red"> {{$message}} </div>
+                                      @enderror
+
+                                <label for="">Aadhaar Card Number *</label>
+                                <input type="tel" wire:model="aadhaar" class="form-control mb-2">
+                                @error('aadhaar')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+
+                                  
+                                
+                                   <label for="">City *</label>
+                                <input type="tel" wire:model="city" class="form-control mb-2">
+                                @error('city')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                               
+                                  <label for="">Zipcode *</label>
+                                <input type="tel" wire:model="zipcode" class="form-control mb-2">
+                                @error('zipcode')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                            
+                            </div>
+                            <div class="container">
+                                <label for="">Company Name </label>
+                                <input type="text" wire:model="cname" class="form-control mb-2">
+                                @error('cname')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                            </div>
+                            <div class="container">
+                                <label for="">Select User </label>
+                                <select class="form-select" wire:model="usertype">
+
+                                    <option value="">Select User Type </option>
+                                    @foreach ($getusers as $item)
+                                    <option value="{{$item->Role}}">{{$item->Name}}  </option>
+                                    @endforeach
+                                    </select>
+                                @error('usertype')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                            </div>
+                            <div class=" d-flex justify-content-end mt-2">
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div wire:ignore.self class="modal fade" id="edituser" tabindex="-1" aria-labelledby="edituser" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">EDIT User</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <form wire:submit.prevent="Update">      
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="">Name *</label>
+                                <input type="text" wire:model="name" class="form-control mb-2">
+                                @error('name')
+                                        <div style="color: red"> {{$message}} </div>
+                                @enderror
+                                <label for="">S/o *</label>
+                                <input type="text" wire:model="so" class="form-control mb-2">
+                                @error('so')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                                <label for="">Date Of Birth</label>
+                                <input type="date" wire:model="dob"  class="form-control mb-2">
+                                @error('dob')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                                <label for="">PAN Card </label>
+                                <input type="text" wire:model="pan" class="form-control mb-2">
+                                @error('pan')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                                  <label for="">Address *</label>
+                                <input type="tel" wire:model="address" class="form-control mb-2">
+                                @error('address')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                                      <label for="">State *</label>
+                                <input type="tel" wire:model="state" class="form-control mb-2">
+                                @error('state')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
                             </div>
                             <div class="col-lg-6">
                                 <label for="">Mobile Number *</label>
@@ -123,13 +249,25 @@
                                   @enderror
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                                 <input type="email" wire:model="email" class="form-control mb-2" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
+                                    aria-describedby="emailHelp" readonly>
                                     @error('email')
                                     <div style="color: red"> {{$message}} </div>
                                       @enderror
                                 <label for="">Aadhaar Card Number *</label>
                                 <input type="tel" wire:model="aadhaar" class="form-control mb-2">
                                 @error('aadhaar')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                                   
+                                   <label for="">City *</label>
+                                <input type="tel" wire:model="city" class="form-control mb-2">
+                                @error('city')
+                                <div style="color: red"> {{$message}} </div>
+                                  @enderror
+                                  
+                                  <label for="">Zipcode *</label>
+                                <input type="tel" wire:model="zipcode" class="form-control mb-2">
+                                @error('zipcode')
                                 <div style="color: red"> {{$message}} </div>
                                   @enderror
                             </div>
@@ -154,7 +292,7 @@
                                   @enderror
                             </div>
                             <div class=" d-flex justify-content-end mt-2">
-                                <button type="submit" class="btn btn-primary">Create</button>
+                                <button type="submit" class="btn btn-primary">SaveChanges</button>
                             </div>
                         </div>
                         </form>

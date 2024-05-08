@@ -15,8 +15,8 @@
 <script>
 window.addEventListener('alert', (event) => {
     // console.log(event);
-    $('#kt_modal_invite_friends').modal('hide');
-
+    $('#adduser').modal('hide');
+    $('#edituser').modal('hide');
     let data = event.detail;
     Swal.fire({
         position: 'center',
@@ -26,7 +26,11 @@ window.addEventListener('alert', (event) => {
         showConfirmButton: false,
         timer: 1500
     });
+
+    
 })
 
+
 </script>
+
 @endsection

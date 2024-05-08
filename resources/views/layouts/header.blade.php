@@ -448,3 +448,4 @@
         <i class="bi bi-record-circle-fill"></i>
         Partner with PayJet and get closer to financial freedom
     </marquee>
+    
