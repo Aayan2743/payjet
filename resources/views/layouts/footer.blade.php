@@ -22,6 +22,11 @@
         </div>
     </div>
 </div>
+
+
+
+
+
 <!-- scanner end -->
 <!-- modal start -->
 
@@ -49,35 +54,35 @@
             "2024-03"
 
         ], // 12
-        datasets: [
-            {
-                label: "Dados primários",
-                fillColor: "rgba(255, 204, 175)",
-                strokeColor: "rgba(255, 122, 47, 1)",
-                pointColor: "rgba(255, 122, 47, 1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "#4d90fe",
-                data: [
+        datasets: [{
+            label: "Dados primários",
+            fillColor: "rgba(255, 204, 175)",
+            strokeColor: "rgba(255, 122, 47, 1)",
+            pointColor: "rgba(255, 122, 47, 1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "#4d90fe",
+            data: [
 
-                    2000000,
-                    1500000,
-                    1000000,
-                    5000000
-                ] // 12
-            }
-        ]
+                2000000,
+                1500000,
+                1000000,
+                5000000
+            ] // 12
+        }]
     };
+
 </script>
 <!-- pie chart -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
 <script>
     $(window).load(function () {
         $('#myModal').modal('show');
-    }); 
+    });
+
 </script>
 <script>
     function Show_Div(Div_id) {
@@ -87,6 +92,7 @@
             $(Div_id).hide(1000);
         }
     }
+
 </script>
 <script src="{{asset('vendor/js/vendor.js')}}"></script>
 <!-- <script src="bootstrap.bundle.min.js"></script> -->

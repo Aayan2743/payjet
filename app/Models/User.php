@@ -29,6 +29,12 @@ class User extends Authenticatable
         'pan',
         'aadheer',
         'companyid',
+        'dob',
+        'address',
+        'state',
+        'city',
+        'zipcode',
+        'userimage',
     ];
 
     /**

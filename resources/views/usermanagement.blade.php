@@ -15,7 +15,7 @@
 <script>
 window.addEventListener('alert', (event) => {
     // console.log(event);
-    $('#kt_modal_invite_friends').modal('hide');
+    $('#adduser').modal('hide');
 
     let data = event.detail;
     Swal.fire({

@@ -398,13 +398,13 @@
                                     </div>
                                     <div class="dropstart">
                                         <div class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <a href="profile.html">
+                                            <a href="{{route('superadmin.profile')}}">
                                                 <i class="bi bi-person-circle fs-2"></i>
                                             </a>
                                         </div>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="profile.html">Profile</a>
+                                                <a class="dropdown-item" href="{{route('superadmin.profile')}}">Profile</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item"

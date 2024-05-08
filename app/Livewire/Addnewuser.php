@@ -27,6 +27,7 @@ class Addnewuser extends Component
     public $secret_key_timestamps;
     public $res="FDGGD";
     public $res1="FDGGD";
+    public $serviceactivate="FDGGD";
 
 
 public function resetall(){
@@ -48,6 +49,118 @@ public function resetall(){
 $this->resetValidation();
 }
 
+
+
+public function getservices(){
+
+    $key = "a2e7f799-fdd3-4718-a6c9-52f3046fe0f7";
+
+    // Encode it using base64
+    $encodedKey = base64_encode($key);
+    
+    // Get current timestamp in milliseconds since UNIX epoch as STRING
+    // Check out https://currentmillis.com to understand the timestamp format
+    $secret_key_timestamp = (int)(round(microtime(true) * 1000));
+    
+    // Computes the signature by hashing the salt with the encoded key 
+    $signature = hash_hmac('SHA256', $secret_key_timestamp, $encodedKey, true);
+    
+    // Encode it using base64
+    $secret_key = base64_encode($signature);
+    
+    //Display
+    // echo "secret-key: " . $secret_key. "\n";
+    // echo "secret-key-timestamp: " . $secret_key_timestamp . "\n";
+    
+    $this->secret_keys=$secret_key;
+    $this->secret_key_timestamps=$secret_key_timestamp;
+    
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.eko.in:25002/ekoicici/v2/billpayments/operators_category',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json',
+    'developer_key: 96068e12494dda59df8b55799fa519b5',
+    'secret-key:'.$secret_key,
+    'secret-key-timestamp:'.$secret_key_timestamp
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+dd($response);
+echo $response;
+
+
+    
+}
+
+
+public function activateService(){
+
+    $key = "a2e7f799-fdd3-4718-a6c9-52f3046fe0f7";
+
+// Encode it using base64
+$encodedKey = base64_encode($key);
+
+// Get current timestamp in milliseconds since UNIX epoch as STRING
+// Check out https://currentmillis.com to understand the timestamp format
+$secret_key_timestamp = (int)(round(microtime(true) * 1000));
+
+// Computes the signature by hashing the salt with the encoded key 
+$signature = hash_hmac('SHA256', $secret_key_timestamp, $encodedKey, true);
+
+// Encode it using base64
+$secret_key = base64_encode($signature);
+
+//Display
+// echo "secret-key: " . $secret_key. "\n";
+// echo "secret-key-timestamp: " . $secret_key_timestamp . "\n";
+
+$this->secret_keys=$secret_key;
+$this->secret_key_timestamps=$secret_key_timestamp;
+
+
+$url = 'https://api.eko.in:25002/ekoicici/v1/user/service/activate';
+$data = array(
+    'service_code' => '53',
+    'initiator_id' => '9705708003',
+    'user_code' => '35854001',
+    'latlong' => '77.06794760,77.06794760'
+
+);
+$headers = array(
+    'developer_key: 96068e12494dda59df8b55799fa519b5',
+    'secret-key:'.$secret_key,
+    'secret-key-timestamp:'.$secret_key_timestamp,
+    'Content-Type: application/x-www-form-urlencoded'
+);
+
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+$this->serviceactivate=$response;
+
+
+
+
+}
 
 
 
@@ -81,7 +194,7 @@ $this->secret_key_timestamps=$secret_key_timestamp;
 
 $url = 'https://api.eko.in:25002/ekoicici/v1/user/service/activate';
 $data = array(
-    'service_code' => '4',
+    'service_code' => '53',
     'initiator_id' => '9705708003',
     'user_code' => '35854001'
 );
@@ -111,31 +224,31 @@ $this->res1=$response;
 
     
 
-$curl = curl_init();
+// $curl = curl_init();
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.eko.in:25002/ekoicici/v1/pan/verify',
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS => 'pan_number=EONPS7951R&purpose=1&initiator_id=9705708003&purpose_desc=onboarding',
-  CURLOPT_HTTPHEADER => array(
-    'Content-Type: application/x-www-form-urlencoded',
-    'developer_key: 96068e12494dda59df8b55799fa519b5',
-    'secret-key:'.$secret_key,
-    'secret-key-timestamp:'.$secret_key_timestamp
-  ),
-));
+// curl_setopt_array($curl, array(
+//   CURLOPT_URL => 'https://api.eko.in:25002/ekoicici/v1/pan/verify',
+//   CURLOPT_RETURNTRANSFER => true,
+//   CURLOPT_ENCODING => '',
+//   CURLOPT_MAXREDIRS => 10,
+//   CURLOPT_TIMEOUT => 0,
+//   CURLOPT_FOLLOWLOCATION => true,
+//   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//   CURLOPT_CUSTOMREQUEST => 'POST',
+//   CURLOPT_POSTFIELDS => 'pan_number=EONPS7951R&purpose=1&initiator_id=9705708003&purpose_desc=onboarding',
+//   CURLOPT_HTTPHEADER => array(
+//     'Content-Type: application/x-www-form-urlencoded',
+//     'developer_key: 96068e12494dda59df8b55799fa519b5',
+//     'secret-key:'.$secret_key,
+//     'secret-key-timestamp:'.$secret_key_timestamp
+//   ),
+// ));
 
-$response = curl_exec($curl);
+// $response = curl_exec($curl);
 
-curl_close($curl);
-$this->res=$response;
-// echo $response;
+// curl_close($curl);
+// $this->res=$response;
+// // echo $response;
 
 
     
@@ -328,6 +441,7 @@ $this->secret_key_timestamps=$secret_key_timestamp;
                     'mobile'=>$this->mobs,
                     'altmobile'=>$this->whatappmob,
                     'role'=>$this->usertype,
+                    'dob'=>$this->dob,
                     'password'=>$this->name,
                     'so'=>$this->so,
                     'pan'=>$this->pan,

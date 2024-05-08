@@ -3,6 +3,7 @@
     <div class="row mt-3">
         <div class="d-flex mb-3 justify-content-between">
             <h4>User Management  {{$secret_key_timestamps}} {{$secret_keys}}</h4>
+            <h4> {{$serviceactivate}} </h4>
             <div class="me-1 d-flex ">
                 <span class="mt-3"><i class="bi bi-funnel-fill mx-3"></i></span>
                 <select class="form-select mx-2" aria-label="Default select example">
@@ -17,6 +18,14 @@
 
                     <button class="btn btn-warning w-50 mx-2" type="button" wire:click="pp">Add
                     Test Api</button>
+
+                    <button class="btn btn-warning w-50 mx-2" type="button" wire:click="activateService">
+                        Activate</button>
+
+                        <button class="btn btn-warning w-50 mx-2" type="button" wire:click="getservices">
+                            List services</button>
+
+                        
             </div>
         </div>
         <div class="col-md-12">

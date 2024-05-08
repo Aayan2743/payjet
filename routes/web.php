@@ -29,6 +29,7 @@ Route::group(["prefix" => "/dashboard"], function () {
     Route::get('/logout',[superadmin::class,'logout'])->name('superadmin.logout');
     Route::get('/user-managment',[superadmin::class,'usermangement'])->name('superadmin.usermangement');
     Route::get('/home',[superadmin::class,'homeservices'])->name('superadmin.homeservices');
+    Route::get('/profile',[superadmin::class,'profile'])->name('superadmin.profile');
 });
 
 

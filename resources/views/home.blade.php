@@ -7,164 +7,14 @@
         <div class="hero-content d-flex mt-5">
             <div class="container-fluid py-5" style="max-width: min-content;">
                 <!-- Tabs -->
-                <ul
-                    class="nav nav-tabs border-bottom style-3 mx-auto"
-                    id="myTab"
-                    role="tablist">
-                    <li class="nav-item">
-                        <a
-                            class="nav-link active"
-                            id="first-tab"
-                            data-bs-toggle="tab"
-                            href="#first"
-                            role="tab"
-                            aria-controls="first"
-                            aria-selected="true">
-                            <span>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                            </span>
-                            Mobile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="second-tab"
-                            data-bs-toggle="tab"
-                            href="#second"
-                            role="tab"
-                            aria-controls="second"
-                            aria-selected="false">
-                            <span>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                            </span>
-                            Post Paid</a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="third-tab"
-                            data-bs-toggle="tab"
-                            href="#third"
-                            role="tab"
-                            aria-controls="third"
-                            aria-selected="false">
-                            <span>
-                                <div class="icon-container">
-                                    <i class="fa-solid fa-credit-card"></i>
-                                    <span class="badge" style="font-size: 11px;">New</span>
-                                </div>
-                            </span>
-                            Card Payment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="fourth-tab"
-                            data-bs-toggle="tab"
-                            href="#fourth"
-                            role="tab"
-                            aria-controls="fourth"
-                            aria-selected="false">
-                            <span>
-                                <i class="fa-solid fa-tv"></i>
-                            </span>
-                            DTH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="fifth-tab"
-                            data-bs-toggle="tab"
-                            href="#fifth"
-                            role="tab"
-                            aria-controls="fifth"
-                            aria-selected="false">
-                            <span>
-                                <i class="fa-solid fa-money-bill-transfer"></i>
-                            </span>
-                            Money Transfer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="sixth-tab"
-                            data-bs-toggle="tab"
-                            href="#sixth"
-                            role="tab"
-                            aria-controls="sixth"
-                            aria-selected="false">
-                            <span>
-                                <img src="images/Aadhaar.svg"></span>
-                            Aadhar Pay</a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="seventh-tab"
-                            data-bs-toggle="tab"
-                            href="#seventh"
-                            role="tab"
-                            aria-controls="seventh"
-                            aria-selected="false">
-                            <span>
-                                <i class="fa-solid fa-lightbulb"></i>
-                            </span>
-                            Electricity</a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="eighth-tab"
-                            data-bs-toggle="tab"
-                            href="#eighth"
-                            role="tab"
-                            aria-controls="eighth"
-                            aria-selected="false">
-                            <span>
-                                <img src="images/car.svg"></span>
-                            Fast Tag
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="ninth-tab"
-                            data-bs-toggle="tab"
-                            href="#ninth"
-                            role="tab"
-                            aria-controls="ninth"
-                            aria-selected="false">
-                            <span>
-                                <img src="images/gas.svg"></span>
-                            Gas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Insurance.html" aria-selected="false">
-                            <span>
-                                <img src="images/insurance.svg"></span>
-                            Insurance</a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            id="tenth-tab"
-                            data-bs-toggle="tab"
-                            href="#tenth"
-                            role="tab"
-                            aria-controls="tenth"
-                            aria-selected="false">
-                            <span>
-                                <i class="fa-solid fa-globe"></i>
-                            </span>Payment Gateway</a>
-                    </li>
-                </ul>
-                <div id="myTabContent" class="tab-content pt-4 pb-2">
+              
+
+                   @livewire('HomeListServices');
+                   
+              
+                {{-- <div id="myTabContent" class="tab-content pt-4 pb-2">
                     <!-- Mobile -->
-                    <div
-                        class="tab-pane fade show active"
-                        id="first"
-                        role="tabpanel"
-                        aria-labelledby="first-tab">
+                    <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
                         <form id="recharge-bill" method="post">
                             <div class="row g-3">
                                 <div class="card p-4">
@@ -174,11 +24,7 @@
                                             <form action="" id="form" onsubmit="sConsole(event)">
                                                 <div class="col-md-6 col-12 col-sm-6 col-xl-2">
                                                     <label for="">Mobile Number</label>
-                                                    <input
-                                                        type="tel"
-                                                        name="data"
-                                                        id="data"
-                                                        class="form-control"
+                                                    <input type="tel" name="data" id="data" class="form-control"
                                                         placeholder="Enter Mobile number">
                                                 </div>
                                                 <div class=" col-md-6 col-12 col-sm-6 col-xl-2">
@@ -204,14 +50,9 @@
                                                 <div class="col-md-12 col-12 col-sm-6 col-xl-4 align-self-center mt-4">
                                                     <!-- Button trigger modal -->
                                                     <!-- <div class="modal-dialog modal-dialog-centered"> -->
-                                                    <button
-                                                        type="button"
-                                                        class="btn btn-danger"
-                                                        data-bs-toggle="modal"
+                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                                         data-bs-target="#example">Submit</button>
-                                                    <button
-                                                        class="btn btn-success mx-2"
-                                                        type="button"
+                                                    <button class="btn btn-success mx-2" type="button"
                                                         onclick="toggle_div_fun('sectiontohide');">View Plans</button>
                                                     <!-- </div> -->
                                                 </div>
@@ -224,7 +65,7 @@
                         <div class="row mt-4">
                             <!-- <button onclick="toggle_div_fun('sectiontohide');">Click here</button> -->
                             <div class="card p-4" id="sectiontohide">
-                                <h4 >Browse Plan</h4>
+                                <h4>Browse Plan</h4>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
@@ -243,8 +84,10 @@
                                                     <p>Rs. 0.00</p>
                                                 </td>
                                                 <td>
-                                                    <p>Rs 349-30D-2.5GB/D -> Benefits: 1. UNLIMITED DATA - 75 GB (2.5 GB/Day) 2.
-                                                        UNLIMITED CALLS3. 100 SMS/Day4. Complimentary Jio AppsValidity - 30 days Rs.
+                                                    <p>Rs 349-30D-2.5GB/D -> Benefits: 1. UNLIMITED DATA - 75 GB (2.5
+                                                        GB/Day) 2.
+                                                        UNLIMITED CALLS3. 100 SMS/Day4. Complimentary Jio AppsValidity -
+                                                        30 days Rs.
                                                         2999</p>
                                                 </td>
                                             </tr>
@@ -256,8 +99,10 @@
                                                     <p>Rs. 0.00</p>
                                                 </td>
                                                 <td>
-                                                    <p>Rs 2999-12m-2.5GB/D -> Benefits of 2999: 1. UNLIMITED DATA - 912.5 GB (2.5
-                                                        GB/Day) 2. UNLIMITED CALLS 3. 100 SMS/Day 4. Complimentary Jio AppsValidity -
+                                                    <p>Rs 2999-12m-2.5GB/D -> Benefits of 2999: 1. UNLIMITED DATA -
+                                                        912.5 GB (2.5
+                                                        GB/Day) 2. UNLIMITED CALLS 3. 100 SMS/Day 4. Complimentary Jio
+                                                        AppsValidity -
                                                         365 days. Rs. 399</p>
                                                 </td>
                                             </tr>
@@ -269,8 +114,10 @@
                                                     <p>Rs. 0.00</p>
                                                 </td>
                                                 <td>
-                                                    <p>Rs 399-28D-90GB -> Benefits: 1. Unlimited Data - 3GB/Day + 6GB2. Unlimited
-                                                        Voice Calls3. 100 SMS/Day4. Complimentary subscription to Jio AppsValidity - 28
+                                                    <p>Rs 399-28D-90GB -> Benefits: 1. Unlimited Data - 3GB/Day + 6GB2.
+                                                        Unlimited
+                                                        Voice Calls3. 100 SMS/Day4. Complimentary subscription to Jio
+                                                        AppsValidity - 28
                                                         Days Rs. 2999</p>
                                                 </td>
                                             </tr>
@@ -281,11 +128,7 @@
                         </div>
                     </div>
                     <!-- postpaid -->
-                    <div
-                        class="tab-pane fade"
-                        id="second"
-                        role="tabpanel"
-                        aria-labelledby="second-tab">
+                    <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
                         <form id="dthRechargeBill" method="post">
                             <div class="row g-3 g-lg-0 search-input-2">
                                 <div class="card p-4">
@@ -294,11 +137,13 @@
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6 col-xl-2 col-lg-6 mt-3">
                                                 <label for="">Mobile Number</label>
-                                                <input type="tell" class="form-control" placeholder="Enter Mobile number">
+                                                <input type="tell" class="form-control"
+                                                    placeholder="Enter Mobile number">
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xl-2 col-lg-6 mt-3">
                                                 <label for="">Select Your Operator</label>
-                                                <select type="select" class="form-control" aria-label="Default select example">
+                                                <select type="select" class="form-control"
+                                                    aria-label="Default select example">
                                                     <option selected="selected">Select Your Operator</option>
                                                     <option value="1">Airtel Postpaid</option>
                                                     <option value="2">Idea Postpaid</option>
@@ -315,10 +160,7 @@
                                                 <input type="text" class="form-control" placeholder="Enter Tpin">
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xl-4 col-lg-6  align-self-center mt-4 ">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-danger mt-2"
-                                                    data-bs-toggle="modal"
+                                                <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal"
                                                     data-bs-target="#example1">Submit</button>
                                                 <button type="button" class="btn btn-success mt-2">View Plans</button>
                                             </div>
@@ -329,11 +171,7 @@
                         </form>
                     </div>
                     <!-- card payment -->
-                    <div
-                        class="tab-pane fade"
-                        id="third"
-                        role="tabpanel"
-                        aria-labelledby="third-tab">
+                    <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
                         <form id="datacardRechargeBill" method="post">
                             <div class="row g-3">
                                 <div class="card p-4">
@@ -342,9 +180,7 @@
                                         <div class="row">
                                             <div class="col-md-6 col-12 mt-3">
                                                 <label for="">Customer Mobile Number</label>
-                                                <input
-                                                    type="tel"
-                                                    class="form-control"
+                                                <input type="tel" class="form-control"
                                                     placeholder="Enter Customer Mobile Number">
                                             </div>
                                             <div class="col-md-6 col-12 mt-3">
@@ -378,10 +214,7 @@
                                                 <input type="text" class="form-control" placeholder="Enter Tpin">
                                             </div>
                                             <div class="container text-end mt-3">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-danger"
-                                                    data-bs-toggle="modal"
+                                                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                                     data-bs-target="#example2">Pay Now</button>
                                             </div>
                                         </div>
@@ -391,11 +224,7 @@
                         </form>
                     </div>
                     <!-- dth -->
-                    <div
-                        class="tab-pane fade"
-                        id="fourth"
-                        role="tabpanel"
-                        aria-labelledby="fourth-tab">
+                    <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
                         <form id="broadbanadBill" method="post">
                             <div class="row g-3 g-lg-0 search-input-2">
                                 <div class="card p-4">
@@ -414,7 +243,8 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xl-3 col-lg-6 mt-3">
                                                 <label for="">Customer ID or Register Number</label>
-                                                <input type="text" class="form-control" placeholder="ID or Register Number">
+                                                <input type="text" class="form-control"
+                                                    placeholder="ID or Register Number">
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xl-2 col-lg-6 mt-3">
                                                 <label for="">Amount</label>
@@ -426,11 +256,9 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xl-3 col-lg-6 mt-3 align-self-center ">
                                                 <button class="btn btn-danger mt-4" type="button">Submit</button>
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-success mt-4"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#example3">View Plans</button>
+                                                <button type="button" class="btn btn-success mt-4"
+                                                    data-bs-toggle="modal" data-bs-target="#example3">View
+                                                    Plans</button>
                                             </div>
                                         </div>
                                     </div>
@@ -439,11 +267,7 @@
                         </form>
                     </div>
                     <!-- money transfer -->
-                    <div
-                        class="tab-pane fade"
-                        id="fifth"
-                        role="tabpanel"
-                        aria-labelledby="fifth-tab">
+                    <div class="tab-pane fade" id="fifth" role="tabpanel" aria-labelledby="fifth-tab">
                         <form id="landlineBill" method="post">
                             <div class="row g-3 g-lg-0 search-input-2">
                                 <div class="card p-4">
@@ -452,24 +276,23 @@
                                         <div class="row">
                                             <div class="col-xl-5 col-lg-12 col-md-12">
                                                 <label for="">Sender Mobile Number</label>
-                                                <input type="tel" class="form-control" placeholder="Sender Mobile Number">
+                                                <input type="tel" class="form-control"
+                                                    placeholder="Sender Mobile Number">
                                             </div>
                                             <div
                                                 class="col-xl-1  col-lg-12 col-md-12 text-center align-self-center  mt-4 mb-2">
-                                                <h5 >
+                                                <h5>
                                                     <span class="bg-violet mt-4 mb-2">OR</span>
                                                 </h5>
                                             </div>
                                             <div class="col-xl-5 col-lg-12 col-md-12">
                                                 <label for="">Recipient Account Number</label>
-                                                <input type="text" class="form-control " placeholder="Recipient Account Number">
+                                                <input type="text" class="form-control "
+                                                    placeholder="Recipient Account Number">
                                             </div>
                                             <div class="col-xl-1 col-lg-12 col-md-12 align-self-center mt-3">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-danger"
-                                                    value="Click me to show or hidden div"
-                                                    data-bs-toggle="modal"
+                                                <button type="button" class="btn btn-danger"
+                                                    value="Click me to show or hidden div" data-bs-toggle="modal"
                                                     data-bs-target="#example40">Search</button>
                                             </div>
                                         </div>
@@ -544,11 +367,7 @@
                         </div>
                     </div>
                     <!-- aadhar Pay -->
-                    <div
-                        class="tab-pane fade"
-                        id="sixth"
-                        role="tabpanel"
-                        aria-labelledby="sixth-tab">
+                    <div class="tab-pane fade" id="sixth" role="tabpanel" aria-labelledby="sixth-tab">
                         <form id="cableTvRechargeBill" method="post">
                             <div class="row g-3 g-lg-0 search-input-2">
                                 <div class="card p-4">
@@ -557,34 +376,22 @@
                                         <div class="row">
                                             <div class="col-md-6 col-12">
                                                 <label for="">Full Name</label>
-                                                <input
-                                                    type="text"
-                                                    class="form-control"
-                                                    placeholder="Enter Full Name"
+                                                <input type="text" class="form-control" placeholder="Enter Full Name"
                                                     required="required">
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <label for="">Mobile Number</label>
-                                                <input
-                                                    type="tel"
-                                                    class="form-control "
-                                                    placeholder="Enter Mobile Number"
-                                                    required="required">
+                                                <input type="tel" class="form-control "
+                                                    placeholder="Enter Mobile Number" required="required">
                                             </div>
                                             <div class="col-md-6 col-12 mt-3">
                                                 <label for="">Email</label>
-                                                <input
-                                                    type="email"
-                                                    class="form-control"
-                                                    placeholder="Enter Email"
+                                                <input type="email" class="form-control" placeholder="Enter Email"
                                                     required="required">
                                             </div>
                                             <div class="col-md-6 col-12 mt-3">
                                                 <label for="">Shop Name</label>
-                                                <input
-                                                    type="text"
-                                                    class="form-control "
-                                                    placeholder="Enter Shop Name"
+                                                <input type="text" class="form-control " placeholder="Enter Shop Name"
                                                     required="required">
                                             </div>
                                             <div class="col-md-6 col-12 mt-3">
@@ -607,11 +414,8 @@
                                             </div>
                                             <div class="col-md-6 col-12 mt-3">
                                                 <label for="">City</label>
-                                                <select
-                                                    type="text"
-                                                    class="form-select"
-                                                    placeholder="Enter Mobile Number"
-                                                    required="required">
+                                                <select type="text" class="form-select"
+                                                    placeholder="Enter Mobile Number" required="required">
                                                     <option value="">Select Your City</option>
                                                     <option value="">Addanki</option>
                                                     <option value="">Adivivaram</option>
@@ -626,19 +430,13 @@
                                             </div>
                                             <div class="col-md-6 col-12 mt-3">
                                                 <label for="">Address</label>
-                                                <input
-                                                    type="text"
-                                                    class="form-control"
-                                                    placeholder="Enter Full Name"
+                                                <input type="text" class="form-control" placeholder="Enter Full Name"
                                                     required="required">
                                             </div>
                                             <div class="col-md-6 col-12 mt-3">
                                                 <label for="">Pincode</label>
-                                                <input
-                                                    type="tel"
-                                                    class="form-control "
-                                                    placeholder="Enter Mobile Number"
-                                                    required="required">
+                                                <input type="tel" class="form-control "
+                                                    placeholder="Enter Mobile Number" required="required">
                                             </div>
                                         </div>
                                     </div>
@@ -659,21 +457,14 @@
                                     </div>
                                 </div>
                                 <div class="container text-end mt-3">
-                                    <button
-                                        class="btn btn-danger "
-                                        type="button"
-                                        data-bs-toggle="modal"
+                                    <button class="btn btn-danger " type="button" data-bs-toggle="modal"
                                         data-bs-target="#example50">Save</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Electricity -->
-                    <div
-                        class="tab-pane fade"
-                        id="seventh"
-                        role="tabpanel"
-                        aria-labelledby="seventh-tab">
+                    <div class="tab-pane fade" id="seventh" role="tabpanel" aria-labelledby="seventh-tab">
                         <form id="electricityBill" method="post">
                             <div class="row g-3 g-lg-0 search-input-2">
                                 <div class="card p-4">
@@ -689,27 +480,24 @@
                                                 <option value="">Torrent Power - Bhiwandi</option>
                                                 <option value="">Torrent Power - Agra</option>
                                                 <option value="">WESCO Utility</option>
-                                                <option value="">West Bengal State Electricity Distribution co.Ltd</option>
+                                                <option value="">West Bengal State Electricity Distribution co.Ltd
+                                                </option>
                                                 <option value="">Uttar Gujarat Vij Company Limited</option>
                                                 <option value="">Tripura State Electricity Corporation Limited</option>
                                             </select>
                                         </div>
                                         <div class="col-xl-3 col-lg-12 col-md-12 mt-3">
                                             <label for="">Customer ID</label>
-                                            <input type="text" class="form-control " placeholder="Enter Your Customer ID">
+                                            <input type="text" class="form-control "
+                                                placeholder="Enter Your Customer ID">
                                         </div>
                                         <div class="col-xl-3 col-lg-12 col-md-12 mt-3">
                                             <label for="">Customer Mobile Number</label>
-                                            <input
-                                                type="tel"
-                                                class="form-control "
+                                            <input type="tel" class="form-control "
                                                 placeholder="Enter Customer Mobile Number ">
                                         </div>
                                         <div class="col-xl-3 col-lg-12 col-md-12 align-self-center mt-4">
-                                            <button
-                                                class="btn btn-danger mt-2"
-                                                type="button"
-                                                data-bs-toggle="modal"
+                                            <button class="btn btn-danger mt-2" type="button" data-bs-toggle="modal"
                                                 data-bs-target="#example60">
                                                 Get Bill
                                             </button>
@@ -720,11 +508,7 @@
                         </form>
                     </div>
                     <!-- fast tag -->
-                    <div
-                        class="tab-pane fade"
-                        id="eighth"
-                        role="tabpanel"
-                        aria-labelledby="eighth-tab">
+                    <div class="tab-pane fade" id="eighth" role="tabpanel" aria-labelledby="eighth-tab">
                         <form id="metroCardRecharge" method="post">
                             <div class="row g-3 g-lg-0 search-input-2">
                                 <div class="card p-4">
@@ -756,18 +540,12 @@
                                             <input type="tel" class="form-control " placeholder="Enter Mobile Number">
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 align-self-center mt-3 d-flex">
-                                            <button
-                                                class="btn btn-danger mt-3"
-                                                type="button"
-                                                data-bs-toggle="modal"
+                                            <button class="btn btn-danger mt-3" type="button" data-bs-toggle="modal"
                                                 data-bs-target="#getbalance">
                                                 Get Balance
                                             </button>
-                                            <button
-                                                class="btn btn-success mx-3 mt-3"
-                                                type="button"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#recharge">Recharge</button>
+                                            <button class="btn btn-success mx-3 mt-3" type="button"
+                                                data-bs-toggle="modal" data-bs-target="#recharge">Recharge</button>
                                         </div>
                                     </div>
                                 </div>
@@ -813,11 +591,7 @@
                         </div>
                     </div>
                     <!-- Gas -->
-                    <div
-                        class="tab-pane fade"
-                        id="ninth"
-                        role="tabpanel"
-                        aria-labelledby="ninth-tab">
+                    <div class="tab-pane fade" id="ninth" role="tabpanel" aria-labelledby="ninth-tab">
                         <form id="gasBill" method="post">
                             <div class="row g-3 g-lg-0 search-input-2">
                                 <div class="card p-4">
@@ -842,9 +616,7 @@
                                         </div>
                                         <div class="col-md-6 col-xl-3 col-lg-6 col-sm-12 mt-3">
                                             <label for="">Customer Mobile Number</label>
-                                            <input
-                                                type="tel"
-                                                class="form-control "
+                                            <input type="tel" class="form-control "
                                                 placeholder="Enter Customer Mobile Number">
                                         </div>
                                         <div class="col-md-6 col-xl-3 col-lg-6 col-sm-12 mt-3">
@@ -852,10 +624,7 @@
                                             <input type="text" class="form-control " placeholder="Enter Amount">
                                         </div>
                                         <div class="col-md-6 col-xl-2 col-lg-6 col-sm-12 align-self-center mt-3">
-                                            <button
-                                                type="button"
-                                                class="btn btn-danger mt-3"
-                                                data-bs-toggle="modal"
+                                            <button type="button" class="btn btn-danger mt-3" data-bs-toggle="modal"
                                                 data-bs-target="#example30">
                                                 Pay Bill
                                             </button>
@@ -866,11 +635,7 @@
                         </form>
                     </div>
                     <!-- Water -->
-                    <div
-                        class="tab-pane fade"
-                        href="Insurance.html"
-                        id="tenth"
-                        role="tabpanel"
+                    <div class="tab-pane fade" href="Insurance.html" id="tenth" role="tabpanel"
                         aria-labelledby="tenth-tab">
                         <div class="row">
                             <div class="card p-4">
@@ -884,7 +649,8 @@
                                     <div class="col-md-3 ">
                                         <div class="card mt-4 p-4" style="border: 1px solid #FF7A2F !important;">
                                             <h6>
-                                                <i class="fa-solid fa-mobile-screen" style="color: #FF7A2F; font-size: 30px;"></i>
+                                                <i class="fa-solid fa-mobile-screen"
+                                                    style="color: #FF7A2F; font-size: 30px;"></i>
                                                 <b class="mx-2">PG - TEZ 2 (Postpaid)</b>
                                             </h6>
                                         </div>
@@ -914,9 +680,7 @@
                                     </div>
                                     <div class="col-md-6 mt-3">
                                         <label for="">Card Holder Mobile Number *</label>
-                                        <input
-                                            type="tel"
-                                            class="form-control"
+                                        <input type="tel" class="form-control"
                                             placeholder="Enter Customer Mobile Number">
                                     </div>
                                     <div class="col-md-6 mt-3">
@@ -932,17 +696,14 @@
                                         <input type="tel" class="form-control" placeholder="Narration">
                                     </div>
                                     <div class="container text-end mt-3">
-                                        <button
-                                            class="btn btn-danger"
-                                            type="button"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-danger" type="button" data-bs-toggle="modal"
                                             data-bs-target="#example32">Get Bin Details</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -1097,12 +858,7 @@
     <!------------------------------cards end------------------------>
     <!-- Modal -->
     <!-- mobile rechar popup -->
-    <div
-        class="modal fade centered"
-        id="example"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
-        aria-hidden="true">
+    <div class="modal fade centered" id="example" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1112,8 +868,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <h5
-                            class="bg-danger-subtle border border-danger-subtle rounded-2 text-danger px-2 py-4">
+                        <h5 class="bg-danger-subtle border border-danger-subtle rounded-2 text-danger px-2 py-4">
                             Invalid Tpin Number
                         </h5>
                     </div>
@@ -1126,11 +881,7 @@
     </div>
     <!-- end mobile -->
     <!-- postapaid popup -->
-    <div
-        class="modal fade centered"
-        id="example1"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="example1" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1138,11 +889,7 @@
                     <div class="container text-center">
                         <img src="images/Success Icon.svg" alt="">
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1176,12 +923,11 @@
                 <div class="container mb-3">
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger w-100 mt-3"
+                                data-bs-dismiss="modal">Close</button>
                         </div>
                         <div class="col-md-6">
-                            <button
-                                type="button"
-                                class="btn btn-success w-100 mt-3"
+                            <button type="button" class="btn btn-success w-100 mt-3"
                                 data-bs-dismiss="modal">Print</button>
                         </div>
                     </div>
@@ -1191,11 +937,7 @@
     </div>
     <!-- end postpaid -->
     <!-- credit poput -->
-    <div
-        class="modal fade centered"
-        id="example2"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="example2" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1203,11 +945,7 @@
                     <div class="container text-center">
                         <img src="images/Success Icon.svg" alt="">
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1244,12 +982,11 @@
                 <div class="container mb-3">
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger w-100 mt-3"
+                                data-bs-dismiss="modal">Close</button>
                         </div>
                         <div class="col-md-6">
-                            <button
-                                type="button"
-                                class="btn btn-success w-100 mt-3"
+                            <button type="button" class="btn btn-success w-100 mt-3"
                                 data-bs-dismiss="modal">Print</button>
                         </div>
                     </div>
@@ -1259,21 +996,13 @@
     </div>
     <!-- end -->
     <!-- dth popup -->
-    <div
-        class="modal fade centered"
-        id="example3"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="example3" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4>Plan Info</h4>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1305,21 +1034,12 @@
     </div>
     <!-- end -->
     <!--scanner -->
-    <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title fs-5" id="exampleModalLabel">My QR Code</h3>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <label for="" class="text-danger">NOTES:</label>
@@ -1339,11 +1059,7 @@
     </div>
     <!-- scanner end -->
     <!-- gas -->
-    <div
-        class="modal fade centered"
-        id="example30"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="example30" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1351,11 +1067,7 @@
                     <div class="container text-center">
                         <img src="images/Success Icon.svg" alt="">
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container text-center">
@@ -1389,12 +1101,11 @@
                 <div class="container mb-3">
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger w-100 mt-3"
+                                data-bs-dismiss="modal">Close</button>
                         </div>
                         <div class="col-md-6">
-                            <button
-                                type="button"
-                                class="btn btn-success w-100 mt-3"
+                            <button type="button" class="btn btn-success w-100 mt-3"
                                 data-bs-dismiss="modal">Print</button>
                         </div>
                     </div>
@@ -1404,11 +1115,7 @@
     </div>
     <!-- end gas -->
     <!-- payment gaTWAY -->
-    <div
-        class="modal fade centered"
-        id="example32"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="example32" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -1419,10 +1126,7 @@
                                 <h5>IM-R-041080</h5>
                             </div>
                             <div class="col-md-6 text-end">
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                         </div>
@@ -1445,7 +1149,7 @@
                         <div class="row">
                             <div class="col-md-12 col-xl-4 col-lg-12 col-sm-12">
                                 <h6 class="text-secondary">Transaction Status</h6>
-                                <p >
+                                <p>
                                     <b>Success</b>
                                 </p>
                             </div>
@@ -1519,10 +1223,12 @@
                 <div class="container mb-3">
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Horizontal Print</button>
+                            <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Horizontal
+                                Print</button>
                         </div>
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Thermal Print</button>
+                            <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Thermal
+                                Print</button>
                         </div>
                     </div>
                 </div>
@@ -1534,11 +1240,7 @@
     </div>
     <!-- END POPUT -->
     <!-- money transfer popup -->
-    <div
-        class="modal fade centered"
-        id="example40"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="example40" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1546,11 +1248,7 @@
                     <div class="container text-start">
                         <h5>Sender Registration</h5>
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1572,12 +1270,11 @@
                     <div class="container mb-3">
                         <div class="row">
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-danger w-100 mt-3"
+                                    data-bs-dismiss="modal">Cancel</button>
                             </div>
                             <div class="col-md-6">
-                                <button
-                                    type="button"
-                                    class="btn btn-success w-100 mt-3"
+                                <button type="button" class="btn btn-success w-100 mt-3"
                                     data-bs-dismiss="modal">Submit</button>
                             </div>
                         </div>
@@ -1588,11 +1285,7 @@
     </div>
     <!-- end popup -->
     <!-- aadhar popup -->
-    <div
-        class="modal fade centered"
-        id="example50"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="example50" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1600,11 +1293,7 @@
                     <div class="container text-start">
                         <h5>Users Mobile Verification</h5>
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1623,17 +1312,13 @@
                     <div class="container mb-3">
                         <div class="row">
                             <div class="col-md-6">
-                                <button
-                                    type="button"
-                                    class="btn btn-danger w-100 mt-3"
-                                    data-bs-dismiss="modal"
+                                <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal"
                                     onclick="Alert.success('Successfully Verified Mobile Number ','Success',{displayDuration: 3000, pos: 'top'})">Submit</button>
                             </div>
                             <div class="col-md-6">
-                                <button
-                                    type="button"
-                                    class="btn btn-success w-100 mt-3"
-                                    onclick="Alert.info('Successfully sent OTP to your registered mobile number +91 96435 64721 ','OTP',{displayDuration: 3000})">Send OTP</button>
+                                <button type="button" class="btn btn-success w-100 mt-3"
+                                    onclick="Alert.info('Successfully sent OTP to your registered mobile number +91 96435 64721 ','OTP',{displayDuration: 3000})">Send
+                                    OTP</button>
                             </div>
                         </div>
                     </div>
@@ -1643,11 +1328,7 @@
     </div>
     <!-- end popup -->
     <!-- electricity popup -->
-    <div
-        class="modal fade centered"
-        id="example60"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="example60" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1655,11 +1336,7 @@
                     <div class="container text-start">
                         <h5>Response</h5>
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1674,7 +1351,8 @@
                     <div class="container mb-3">
                         <div class="row">
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-danger w-100 " data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger w-100 "
+                                    data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -1684,11 +1362,7 @@
     </div>
     <!-- end popup -->
     <!-- get balance -->
-    <div
-        class="modal fade centered"
-        id="getbalance"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="getbalance" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1696,11 +1370,7 @@
                     <div class="container text-start">
                         <h5>Fastag Balance</h5>
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1734,7 +1404,8 @@
                     <div class="container mb-3">
                         <div class="row">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-danger w-100 " data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger w-100 "
+                                    data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -1743,11 +1414,7 @@
         </div>
     </div>
     <!-- recharge popou -->
-    <div
-        class="modal fade centered"
-        id="recharge"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="recharge" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1755,11 +1422,7 @@
                     <div class="container text-start">
                         <h5>Payment Details</h5>
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1813,12 +1476,8 @@
                     <div class="container mb-3">
                         <div class="row">
                             <div class="col-md-12">
-                                <button
-                                    type="button"
-                                    class="btn btn-success w-100 "
-                                    data-bs-dismiss="modal"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#proced-to-pay">Proceed to Pay</button>
+                                <button type="button" class="btn btn-success w-100 " data-bs-dismiss="modal"
+                                    data-bs-toggle="modal" data-bs-target="#proced-to-pay">Proceed to Pay</button>
                             </div>
                         </div>
                     </div>
@@ -1826,11 +1485,7 @@
             </div>
         </div>
     </div>
-    <div
-        class="modal fade centered"
-        id="proced-to-pay"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel1"
+    <div class="modal fade centered" id="proced-to-pay" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1838,11 +1493,7 @@
                     <div class="container text-center">
                         <img src="images/Success Icon.svg" alt="">
                     </div>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -1893,7 +1544,8 @@
                     <div class="container mb-3">
                         <div class="row">
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger w-100 mt-3"
+                                    data-bs-dismiss="modal">Close</button>
                             </div>
                             <div class="col-md-6">
                                 <button type="button" class="btn btn-success w-100 mt-3 ">Print</button>
