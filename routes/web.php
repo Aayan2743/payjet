@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Superadmin;
-
+use App\Http\Controllers\Profile;
+use App\Http\Controllers\signout;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +29,14 @@ Route::group(["prefix" => "/dashboard"], function () {
     Route::get('/',[superadmin::class,'index'])->name('superadmin.home');
     Route::get('/logout',[superadmin::class,'logout'])->name('superadmin.logout');
     Route::get('/user-managment',[superadmin::class,'usermangement'])->name('superadmin.usermangement');
-    Route::get('/home',[superadmin::class,'homeservices'])->name('superadmin.homeservices');
+   Route::get('/home',[superadmin::class,'homeservices'])->name('superadmin.homeservices');
+
+
+   //Shriyansh code 08-05-24
+    Route::get('/changepassword',[profile::class,'passwordChange'])->name('profile.passwordservices');
+    Route::get('/logoutu',[signout::class,'logout'])->name('logout');
 });
+//
 
 
 

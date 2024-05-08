@@ -195,7 +195,7 @@
                         <!-- Logo============================================= -->
                         <div class=" col-md-2 logo mx-4 ">
                             <a class="navbar-brand" href="">
-                                <img src="images/logoooo.svg">
+                                <img src="{{asset('images/logoooo.svg')}}">
                             </a>
                         </div>
                         <!-- Logo end -->
@@ -356,7 +356,8 @@
                                                 <div class="dropdown-center">
                                                     <div class=" dropdown-toggle" type="button"
                                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <img src="images/postpaid.svg">
+                                                       
+                                                        <img src="{{asset('images/postpaid.svg')}}">
                                                         <span class="nav-smartphone dropdown">Wallet
                                                             <b>₹14.12</b>
                                                         </span>
@@ -390,7 +391,8 @@
                                     </div>
                                     <div class="EMI-calculator">
                                         <button type="button" class="btn btn-outline-danger btn-text">
-                                            <img src="images/calculate-fill.svg">
+                                            <img src="{{asset('images/calculate-fill.svg')}}">
+                                            
                                             <span>
                                                 EMI Calculator</span>
                                         </button>
@@ -407,13 +409,13 @@
                                             </li>
                                             
                                             <li>
-                                                <a class="dropdown-item" href="password-change.html">Password Change</a>
+                                                <a class="dropdown-item" href="{{route('profile.passwordservices')}}">Password Change</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item" href="Create-T-Pin.html">Create Tpin</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="login.html">Logout</a>
+                                                <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
                                             </li>
                                         </ul>
                                     </div>

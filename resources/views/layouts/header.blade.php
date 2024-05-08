@@ -411,7 +411,7 @@
                                                     href="{{route('superadmin.usermangement')}}">User Management</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="password-change.html">Password Change</a>
+                                                <a class="dropdown-item" href="{{route('profile.passwordservices')}}">Password Change</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item" href="Create-T-Pin.html">Create Tpin</a>
