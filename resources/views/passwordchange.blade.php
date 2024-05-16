@@ -95,7 +95,7 @@
                                         aria-controls="sixth"
                                         aria-selected="false">
                                         <span>
-                                            <img src="images/Aadhaar.svg"></span>
+                                            <img src="{{asset('images/aadhar.svg')}}"></span>
                                         Aadhar Pay</a>
                                 </li>
                                 <li class="nav-item">
