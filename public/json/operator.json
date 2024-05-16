@@ -1,0 +1,142 @@
+{
+    "data": [
+      {
+        "operator_category_name": "Broadband Postpaid",
+        "operator_category_id": 1,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Gas",
+        "operator_category_id": 2,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "DTH",
+        "operator_category_id": 4,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Mobile Prepaid",
+        "operator_category_id": 5,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Tax",
+        "operator_category_id": 6,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Credit Card",
+        "operator_category_id": 7,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Electricity",
+        "operator_category_id": 8,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Landline Postpaid",
+        "operator_category_id": 9,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Mobile Postpaid",
+        "operator_category_id": 10,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Water",
+        "operator_category_id": 11,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Housing Society",
+        "operator_category_id": 12,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Subscription",
+        "operator_category_id": 13,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Education",
+        "operator_category_id": 14,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Municipal Taxes",
+        "operator_category_id": 15,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Clubs and Associations",
+        "operator_category_id": 16,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Cable TV",
+        "operator_category_id": 17,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "LPG Cylinder",
+        "operator_category_id": 18,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Hospital",
+        "operator_category_id": 19,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Insurance",
+        "operator_category_id": 20,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Loan",
+        "operator_category_id": 21,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "FASTag",
+        "operator_category_id": 22,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Municipal Services",
+        "operator_category_id": 23,
+        "operator_category_group": "0",
+        "status": "1"
+      },
+      {
+        "operator_category_name": "Subscription2",
+        "operator_category_id": 24,
+        "operator_category_group": "0",
+        "status": "1"
+      }
+    ]
+  }

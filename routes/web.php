@@ -30,6 +30,7 @@ Route::group(["prefix" => "/dashboard"], function () {
     Route::get('/user-managment',[superadmin::class,'usermangement'])->name('superadmin.usermangement');
     Route::get('/home',[superadmin::class,'homeservices'])->name('superadmin.homeservices');
     Route::get('/profile',[superadmin::class,'profile'])->name('superadmin.profile');
+    Route::get('/user-services',[superadmin::class,'userservice'])->name('superadmin.userservice');
 });
 
 

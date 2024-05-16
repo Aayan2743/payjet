@@ -1,0 +1,66 @@
+{
+    "response_status_id": -1,
+    "data": {
+        "service_list": [
+            {
+                "service_name": "Pan Verification",
+                "service_code": "4",
+                "provider_name": "NSDL"
+            },
+            {
+                "service_name": "AePS Fund Settlement",
+                "service_code": "39",
+                "provider_name": "Yes Bank"
+            },
+            {
+                "service_name": "Virtual Account",
+                "service_code": "41",
+                "provider_name": "Yes Bank"
+            },
+            {
+                "service_name": "AEPS",
+                "service_code": "43",
+                "provider_name": "ICICI/Kotak"
+            },
+            {
+                "service_name": "Generic Fund Settlement",
+                "service_code": "45",
+                "provider_name": "Yes Bank"
+            },
+            {
+                "service_name": "Aadhaar Pay",
+                "service_code": "51",
+                "provider_name": "FINO"
+            },
+            {
+                "service_name": "AEPS",
+                "service_code": "52",
+                "provider_name": "FINO"
+            },
+          	{
+                "service_name": "BBPS",
+                "service_code": "53",
+                "provider_name": ""
+            },
+            {
+                "service_name": "QR",
+                "service_code": "59",
+                "provider_name": ""
+            },
+            {
+                "service_name": "CMS",
+                "service_code": "58",
+                "provider_name": ""
+            },
+            {
+                "service_name": "Credit Card",
+                "service_code": "63",
+                "provider_name": "FINO"
+            }
+
+        ]
+    },
+    "response_type_id": 1280,
+    "message": "List of active services",
+    "status": 0
+}

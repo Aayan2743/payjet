@@ -416,6 +416,10 @@
                                             <li>
                                                 <a class="dropdown-item" href="Create-T-Pin.html">Create Tpin</a>
                                             </li>
+
+                                            <li>
+                                                <a class="dropdown-item"  href="{{route('superadmin.userservice')}}">My Services</a>
+                                            </li>
                                             <li>
                                                 <a class="dropdown-item" href="login.html">Logout</a>
                                             </li>

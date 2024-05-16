@@ -35,4 +35,8 @@ class Superadmin extends Controller
         return view('profile');
 
     }
+
+    public function userservice(){
+        return view('userservices');
+    }
 }

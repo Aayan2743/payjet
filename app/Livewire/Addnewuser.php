@@ -49,7 +49,89 @@ public function resetall(){
 $this->resetValidation();
 }
 
+public function paybill(){
 
+
+$curl = curl_init();
+
+
+
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.eko.in:25002/ekoicici/v2/billpayments/operators?category=5',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json',
+    'developer_key:'.session()->get('d_key'),
+    'secret-key:'.session()->get('s_key'),
+    'secret-key-timestamp:'.session()->get('time_stamp')
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+dd($response);
+
+echo $response;
+
+
+
+
+
+}
+
+
+public function prepaid(){
+
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.eko.in:25002/ekoicici/v2/billpayments/fetchbill?initiator_id='.session()->get('initiator_id'),
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+    
+    "source_ip":"121.121.1.1",
+    "user_code":"35854001",
+    "client_ref_id":"202105311125123456",
+    "utility_acc_no":"151627591",
+    "confirmation_mobile_no":"9440161007",
+    "sender_name":"Asif",,
+    "operator_id":"22",
+    "latlong":"77.06794760,77.06794760"
+}
+',
+  CURLOPT_HTTPHEADER => array(
+    'developer_key:'.session()->get('d_key'),
+    'secret-key-timestamp:'.session()->get('time_stamp'),
+    'secret-key:'.session()->get('s_key'),
+    'Content-Type: application/json',
+    'Connection: Keep-Alive',
+    'Accept-Encoding: gzip',
+    'User-Agent: okhttp/3.9.0'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+dd($response);
+echo $response;
+
+}
 
 public function getservices(){
 
@@ -76,30 +158,6 @@ public function getservices(){
     $this->secret_key_timestamps=$secret_key_timestamp;
     
 
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.eko.in:25002/ekoicici/v2/billpayments/operators_category',
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'GET',
-  CURLOPT_HTTPHEADER => array(
-    'Content-Type: application/json',
-    'developer_key: 96068e12494dda59df8b55799fa519b5',
-    'secret-key:'.$secret_key,
-    'secret-key-timestamp:'.$secret_key_timestamp
-  ),
-));
-
-$response = curl_exec($curl);
-
-curl_close($curl);
-dd($response);
-echo $response;
 
 
     

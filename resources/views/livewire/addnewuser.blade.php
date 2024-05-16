@@ -22,8 +22,8 @@
                     <button class="btn btn-warning w-50 mx-2" type="button" wire:click="activateService">
                         Activate</button>
 
-                        <button class="btn btn-warning w-50 mx-2" type="button" wire:click="getservices">
-                            List services</button>
+                        <button class="btn btn-warning w-50 mx-2" type="button" wire:click="prepaid">
+                            Pay fdff</button>
 
                         
             </div>
@@ -86,6 +86,7 @@
             </div>
         </div>
     </div>
+    
     <div wire:ignore.self class="modal fade" id="adduser" tabindex="-1" aria-labelledby="adduser" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
