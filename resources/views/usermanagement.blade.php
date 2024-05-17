@@ -15,6 +15,7 @@
 <script>
 window.addEventListener('alert', (event) => {
     // console.log(event);
+    $('#edit').modal('hide');
     $('#adduser').modal('hide');
 
     let data = event.detail;
@@ -28,5 +29,25 @@ window.addEventListener('alert', (event) => {
     });
 })
 
+
+
+
+</script>
+
+<script>
+window.addEventListener('alert1', (event) => {
+    // console.log(event);
+   
+
+    let data = event.detail;
+    Swal.fire({
+        position: 'center',
+        // icon: "success",
+        icon: data.icon,
+        title: data.title,
+        showConfirmButton: false,
+        timer: 1500
+    });
+})
 </script>
 @endsection

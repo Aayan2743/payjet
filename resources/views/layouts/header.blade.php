@@ -421,7 +421,7 @@
                                                 <a class="dropdown-item"  href="{{route('superadmin.userservice')}}">My Services</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="login.html">Logout</a>
+                                                <a class="dropdown-item" href="{{route('superadmin.logout')}}">Logout</a>
                                             </li>
                                         </ul>
                                     </div>

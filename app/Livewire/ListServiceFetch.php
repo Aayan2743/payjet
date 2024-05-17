@@ -130,11 +130,11 @@ $response = $client->request('POST', 'https://api.eko.in:25002/ekoicici/v1/agent
 ]);
 
 
-var_dump($response->getBody());
-dd($response);
+// var_dump($response->getBody());
+// dd($response);
 echo $response->getBody();
 
-$this->message=$response->getBody();
+// $this->message=$response->getBody();
 // dd($response->getBody());
 
 
@@ -156,6 +156,50 @@ $this->message=$response->getBody();
         // // return view('your.blade.view', ['data' => $data]);
 
         // return view('livewire.list-service-fetch', ['services' => $data['data']['service_list']]);
+
+
+        // ListServiceFetch
+
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_PORT => "25002",
+  CURLOPT_URL => "https://api.eko.in:25002/ekoicici/v1/user/services/user_code:20110002?initiator_id=9962981729",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "Accept: */*",
+    "Accept-Encoding: gzip, deflate",
+    "Cache-Control: no-cache",
+    "Connection: keep-alive",
+    "Host: staging.eko.in:25002",
+    "cache-control: no-cache",
+    "developer_key: becbbce45f79c6f5109f848acd540567",
+    "secret-key: MC6dKW278tBef+AuqL/5rW2K3WgOegF0ZHLW/FriZQw=",
+    "secret-key-timestamp: 1516705204593"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+
+
+
+
         return view('livewire.list-service-fetch');
     }
 }
