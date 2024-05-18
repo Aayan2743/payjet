@@ -20,10 +20,10 @@
                     </button>
 
                 <button class="btn btn-warning w-50 mx-2" type="button" wire:click="activateService">
-                    Activate</button>
+                    Active service code 45</button>
 
-                <button class="btn btn-warning w-50 mx-2" type="button" wire:click="prepaid">
-                    Pay fdff</button>
+                <button class="btn btn-warning w-50 mx-2" type="button" wire:click="listallservice">
+                    List Service</button>
 
 
             </div>
@@ -53,7 +53,9 @@
                             <td class="align-content-center">{{$users->mobile}}</td>
                             <td class="align-content-center">{{$users->email}}</td>
                             <td class="align-content-center">
-                                {{$users->Companyname}}
+                                {{$users->Companyname}} <br>
+                                {{$users->pan}}<br>
+                                {{$users->USERCODE}}
                             </td>
                             <td class="align-content-center">
 
@@ -71,9 +73,18 @@
                                 @endif
 
                             </td>
-                            <td class="align-content-center"><span><i class="bi bi-eye-fill"></i></span>
-                                <span><i class="bi bi-trash-fill mx-2"></i></span>
-                                <span><i class="bi bi-pencil-fill"></i></span>
+                            <td class="align-content-center">
+                                <span>
+                                    <a href="#" wire:click="listallservice" data-bs-toggle="modal" data-bs-target="#listofservices"
+                                   > 
+                                     <i class="bi bi-eye-fill"></i></a>
+                                </span>
+                                <span>
+                                    <i class="bi bi-trash-fill mx-2"></i>
+                                </span>
+                                <span>
+                                    <i class="bi bi-pencil-fill"></i>
+                                </span>
                             </td>
                         </tr>
 
@@ -303,6 +314,63 @@
                                 <button type="submit" class="btn btn-primary w-100">Create User</button>
                             </div>
                         </div>
+                        <!--end::Input group-->
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div  wire:ignore.self class="modal fade" id="listofservices" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editLabel">List Of Services</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form wire:submit.prevent="addnewuser">
+
+                    <div class="card-body border-top p-9">
+                        <!--begin::Input group-->
+                        <div class="row mb-6">
+                          
+                        </div>
+                        @foreach ($services as $item)
+                        <div class="row mb-1">
+                            <div class="col-4">
+                               
+
+                                <label for="" style="font-size: 14px !important">{{$item['service_name']}}</label>
+                               
+                            </div>
+
+                            <div class="col-4">
+                                <label for="" style="font-size: 14px !important">{{$item['service_code']}}</label>
+                             
+
+                              
+
+                            </div>
+                            <div class="col-4">
+                                <label for="" style="font-size: 14px !important">{{$item['provider_name']}}</label>
+                             
+
+                              
+
+                            </div>
+                      
+                        </div>
+                            
+                        @endforeach
+                      
+                     
+                      
+
+                     
+                      
+                    
                         <!--end::Input group-->
                     </div>
                     </form>

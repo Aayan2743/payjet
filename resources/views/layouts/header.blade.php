@@ -359,7 +359,8 @@
                                                         data-bs-toggle="dropdown" aria-expanded="false">
                                                         <img src="images/postpaid.svg">
                                                         <span class="nav-smartphone dropdown">Wallet
-                                                            <b>₹14.12</b>
+                                                            {{-- <b>₹14.12</b> --}}
+                                                            <b>{{ $aa=pp();}}</b>
                                                         </span>
                                                     </div>
                                                     <ul class="dropdown-menu">
